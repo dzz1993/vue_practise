@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学习一下vue 基本方式渲染组件</title>
+    <script src="lib/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <login></login>
+</div>
+<script>
+    //定义一个组件
+    let login = {
+        template:"<div>this is login</div>"
+    };
+    //创建一个vue实例，得到ViewModel
+    let vm = new Vue({
+        el:'#app',
+        data:{},
+        methods:{
+
+        },
+        components:{
+            login
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>render方法渲染组件</title>
+    <script src="lib/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <h2>由于这是render方法渲染出来的页面，所以这句话不会显示</h2>
+</div>
+
+<script>
+    let login = {
+        template: '<h1>login</h1>'
+    };
+    let vm = new Vue({
+        el:'#app',
+        data:{},
+        methods:{},
+        render:function (createElement) {
+            return createElement(login);
+        }
+    })
+</script>
+</body>
+</html>
